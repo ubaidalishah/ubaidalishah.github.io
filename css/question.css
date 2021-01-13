@@ -1,0 +1,149 @@
+*{
+    font-family: 'Yusei Magic', sans-serif;
+
+}
+.container{
+    /* border: 2px solid red; */
+    display:flex;
+    align-content: center;
+    margin-left: 39vw;
+    margin-top: 15vh;
+    width: 30vw;
+    background-color: #747090c4;
+    border-radius: 10px;
+    height: 60vh;
+    padding-left: 3vw;
+    
+}
+#ub{
+margin-top: 5vh;
+width: 20vw;
+height: 4vh;
+
+}
+#ab{
+    margin-top: 5vh;
+    width: 20vw;
+    height: 4vh;
+}
+#ib{
+
+height: 20vh;
+width: 20vw;
+margin-top: 5vh;
+
+}
+#db{
+    height: 6vh;
+    width: 32vh;
+    margin-top: 3vh;
+    margin-left: 7vw;
+    font-size: 25px;
+    color: #58ee14;
+    background: black;
+    text-align: center;
+    padding-bottom: 3px;
+    border-radius:5px;
+}
+body{
+    background-image: url(../image/5.jpg);
+    background-size: 1200px;
+}
+label{
+    color:#58ee14;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+img{
+    
+    display: inline-block;
+    max-width: 21%;
+     position: absolute;
+     /* border: 2px solid green; */
+     top: 26%;
+     border-radius: 30px;
+     
+}
+.logo{
+    color: #fff;
+    max-height: 75px;
+    max-width: 31%;
+    background-color: #000;
+    padding-top:25px;
+    margin-bottom: 6px;
+    margin-top: 0%;
+    font-size: 42px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+.logo{
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff,  
+                 0 0 160px #fff;  
+
+
+  }
+  .navbar li{
+    display: inline-block;
+    padding-top: 13px;
+}
+
+.navbar li a {
+        text-decoration: none;
+        /* border: 2px solid red; */
+        font-size: 26px;
+        color: snow;
+        display: inline-block;
+        width: auto;
+        padding-left: 18px;
+        padding-right: 18px;
+}
+.navbar ul {
+	/* border: 2px solid black; */
+	max-width: 50%;
+	margin-left: 33%;
+	position: absolute;
+	top: 5%;
+	max-height: auto;
+	/* background: #384769; */
+	border-radius: 8px;
+}
+.social ul{
+    /* border: 2px solid yellow; */
+    width: 18%;
+    position: absolute;
+    margin-left: 0%;
+    top:85% ;
+
+  }
+  .social ul li{
+      display: inline-block;
+    padding-left:11px;
+      
+  }
+  .social a{
+    padding: 12px;
+    font-size: 31px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: snow;
+  }
+.fa-facebook{
+    background: #3B5998
+}
+.fa-instagram{
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); ;
+}
+.fa-youtube{
+    background: #c4302b;
+}
+.navbar li a:hover{
+    background-color: grey;
+    border-radius: 8px;
+    color: black;
+    }    
