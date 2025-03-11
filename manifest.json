@@ -1,0 +1,22 @@
+{
+    "name": "Universities List",
+    "short_name": "UniTracker",
+    "description": "Track university applications easily!",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#0073e6",
+    "theme_color": "#0073e6",
+    "icons": [
+      {
+        "src": "icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

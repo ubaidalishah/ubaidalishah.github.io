@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Application Tracker</title>
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            margin: 20px;
+        }
+        h2 {
+            background: #0073e6;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #0073e6;
+            color: white;
+            cursor: pointer;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr.new-entry {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        .apply-status {
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .cross { color: red; }
+        .tick { color: green; }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        button {
+            background-color: #0073e6;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>University Application Tracker</h2>
+    <table id="universityTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Website</th>
+                <th>Country</th>
+                <th onclick="sortTable()">Application Date &#x2195;</th>
+                <th>Applied</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="form-container">
+        <input type="text" id="name" placeholder="University Name">
+        <input type="text" id="website" placeholder="Website">
+        <input type="text" id="country" placeholder="Country">
+        <input type="date" id="date">
+        <button onclick="addRow()">Add</button>
+    </div>
+    <button onclick="downloadPDF()">Download PDF</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => loadTable());
+        
+        function loadTable() {
+            let storedData = localStorage.getItem("universityData");
+            if (storedData) {
+                let table = document.getElementById("universityTable").getElementsByTagName('tbody')[0];
+                JSON.parse(storedData).forEach(entry => {
+                    let row = table.insertRow();
+                    row.classList.add("new-entry");
+                    row.insertCell(0).textContent = entry.name;
+                    row.insertCell(1).innerHTML = `<a href='${entry.website}' target='_blank'>${entry.website}</a>`;
+                    row.insertCell(2).textContent = entry.country;
+                    row.insertCell(3).textContent = entry.date || "-";
+                    let applyCell = row.insertCell(4);
+                    applyCell.classList.add("apply-status");
+                    applyCell.innerHTML = entry.applied;
+                    let deleteCell = row.insertCell(5);
+                    deleteCell.innerHTML = `<button onclick="deleteRow(this)">Delete</button>`;
+                });
+            }
+        }
+        
+        function addRow() {
+            let name = document.getElementById("name").value;
+            let website = document.getElementById("website").value;
+            let country = document.getElementById("country").value;
+            let date = document.getElementById("date").value;
+            
+            if (name && website && country) {
+                let table = document.getElementById("universityTable").getElementsByTagName('tbody')[0];
+                let row = table.insertRow();
+                row.classList.add("new-entry");
+                row.insertCell(0).textContent = name;
+                row.insertCell(1).innerHTML = `<a href='${website}' target='_blank'>${website}</a>`;
+                row.insertCell(2).textContent = country;
+                row.insertCell(3).textContent = date || "-";
+                let applyCell = row.insertCell(4);
+                applyCell.classList.add("apply-status");
+                applyCell.innerHTML = `<span class='cross' onclick='toggleApply(this)'>&#10060;</span>`;
+                let deleteCell = row.insertCell(5);
+                deleteCell.innerHTML = `<button onclick="deleteRow(this)">Delete</button>`;
+                saveData();
+                sortTable();
+            }
+        }
+        
+        function downloadPDF() {
+    const element = document.createElement('div');
+
+    // Create and style heading
+    const heading = document.createElement('h2');
+    heading.textContent = "Universities List";
+    heading.style.textAlign = "center";
+    heading.style.padding = "15px";
+    heading.style.backgroundColor = "black";
+    heading.style.color = "white";
+    heading.style.fontSize = "22px";
+    heading.style.marginBottom = "20px";
+    heading.style.borderRadius = "8px";
+
+    // Clone table and remove "Actions" column
+    const tableClone = document.getElementById("universityTable").cloneNode(true);
+    let actionColumnIndex = 5; // "Actions" column index
+    for (let row of tableClone.rows) {
+        if (row.cells.length > actionColumnIndex) {
+            row.deleteCell(actionColumnIndex);
+        }
+    }
+
+    // Append heading and modified table to a new element
+    element.appendChild(heading);
+    element.appendChild(tableClone);
+
+    // Generate high-quality PDF
+    html2pdf(element, {
+        margin: 10,
+        filename: 'Universities_List.pdf',
+        image: { type: 'jpeg', quality: 1.0 },
+        html2canvas: { scale: 4 }, // Increased scale for better quality
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    });
+    if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch((error) => console.log("Service Worker Registration Failed", error));
+}
+
+}
+
+
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>
