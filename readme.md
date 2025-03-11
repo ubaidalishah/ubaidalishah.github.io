@@ -32,7 +32,7 @@ A simple **University Application Tracker** that lets you **add, manage, and dow
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/your-username/University-Application-Tracker.git
+   git clone https://github.com/ubaidalishah/ubaidalishah.github.io.git
    cd University-Application-Tracker
    ```
 
