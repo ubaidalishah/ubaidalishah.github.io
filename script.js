@@ -132,7 +132,7 @@ function downloadPDF() {
   html2pdf(element, {
     margin: 10,
     filename: "Universities_List.pdf",
-    image: { type: "pdf", quality: 1.0 },
+    image: { type: "jpeg", quality: 1.0 },
     html2canvas: { scale: 4 },
     jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
   });
