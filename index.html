@@ -774,7 +774,10 @@
             ) {
               return result.candidates[0].content.parts[0].text;
             } else {
-              return "I apologize, but I couldn't process that request or find an answer in Ubaid's portfolio. Please try rephrasing your question.";
+              return `👋 Hey there!
+                      Thanks for trying out my Gemini Assistant.
+                      🚫 Due to GitHub Pages limitations, I haven’t added the API key — so the assistant isn’t fully functional right now.
+                      💡 If you'd like to see it in action or want a similar integration in your own portfolio, feel free to reach out. I'd love to help!`;
             }
           } catch (error) {
             console.error("Error calling Gemini API:", error);
