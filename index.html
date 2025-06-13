@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubaid Ali Shah | Front-End Developer & AI Enthusiast</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231A1A1A'/%3E%3Ctext x='50%' y='50%' font-family='Inter, sans-serif' font-size='60' text-anchor='middle' dominant-baseline='middle' fill='%23FF8C00'%3EU%3C/text%3E%3C/svg%3E"
+      type="image/svg+xml"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body class="bg-primary text-body antialiased">
+    <header
+      id="header"
+      class="bg-primary/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-shadow duration-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-bold text-body">Ubaid Ali Shah</a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <span class="text-3xl">☰</span>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a
+          href="#about"
+          class="block text-center py-2 px-4 text-sm hover:bg-secondary"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="block text-center py-2 px-4 text-sm hover:bg-secondary"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="block text-center py-2 px-4 text-sm hover:bg-secondary"
+          >Projects</a
+        >
+        <a
+          href="#contact"
+          class="block text-center py-2 px-4 text-sm hover:bg-secondary"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+      <section
+        id="hero"
+        class="min-h-screen flex flex-col justify-center items-center text-center"
+      >
+        <div class="fade-in-section" id="hero">
+          <h2 class="text-lg md:text-xl font-medium">Hello, I'm</h2>
+          <h1
+            class="text-5xl md:text-7xl lg:text-8xl font-black my-2 text-heading-accent"
+          >
+            Ubaid Ali Shah
+          </h1>
+          <p class="text-xl md:text-2xl lg:text-3xl font-bold mt-2 mb-4">
+            Front-End Developer | ML/AI Enthusiast
+          </p>
+          <p class="max-w-2xl mx-auto mb-8 text-base md:text-lg">
+            I'm a Computer Science graduate from Pakistan, passionate about
+            building intelligent and engaging web experiences that blend
+            creative design with data-driven functionality.
+          </p>
+          <div class="flex justify-center gap-4">
+            <a
+              href="#projects"
+              class="bg-accent text-primary font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300 transform hover:scale-105"
+              >View My Work</a
+            >
+            <a
+              href="#contact"
+              class="border-2 border-accent text-accent font-bold py-3 px-8 rounded-full hover:bg-accent hover:text-primary transition duration-300 transform hover:scale-105"
+              >Connect with Me</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 scroll-target fade-in-section">
+        <h2 class="text-4xl font-bold text-center mb-12 text-heading-accent">
+          About Me
+        </h2>
+        <div class="grid md:grid-cols-5 gap-10 items-center">
+          <div class="md:col-span-2">
+            <div class="profile-image-container w-full max-w-sm mx-auto">
+              <img
+                src="src/image3.png"
+                alt="Ubaid Ali Shah professional headshot"
+                class="rounded-lg w-full object-cover h-auto"
+              />
+            </div>
+          </div>
+          <div class="md:col-span-3 text-lg space-y-4">
+            <p>
+              I am a Computer Science graduate from IMSciences (2024), based in
+              the beautiful valley of Swat, Pakistan. My journey in technology
+              has ignited a deep passion for crafting dynamic and intelligent
+              web applications that solve real-world problems.
+            </p>
+            <p>
+              My expertise spans across front-end development, utilizing modern
+              technologies like React and Tailwind CSS, alongside robust
+              server-side logic with Python and Flask. What truly excites me is
+              the intersection of web development and artificial intelligence. I
+              possess a strong foundation in Machine Learning concepts, allowing
+              me to bring a unique blend of user-centric design and data-driven
+              intelligence to my projects.
+            </p>
+            <p>
+              Beyond coding, I'm adept with Git for version control, ensuring
+              clean and collaborative workflows. I'm a lifelong learner,
+              constantly exploring new technologies to push the boundaries of
+              what's possible on the web.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-20 scroll-target fade-in-section">
+        <h2 class="text-4xl font-bold text-center mb-4 text-heading-accent">
+          My Expertise
+        </h2>
+        <p class="text-center max-w-3xl mx-auto mb-12">
+          I have a versatile skill set that spans from front-end design to the
+          core logic of machine learning. The chart below provides a visual
+          overview of my key competencies, followed by a more detailed breakdown
+          of the technologies I work with.
+        </p>
+        <div class="chart-container mb-16">
+          <canvas id="skillsChart"></canvas>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center"
+        >
+          <div
+            class="bg-secondary p-6 rounded-lg border border-secondary hover:border-accent transition-colors duration-300"
+          >
+            <div class="text-4xl mb-4">💻</div>
+            <h3 class="text-2xl font-bold mb-2 text-heading-accent">
+              Front-End
+            </h3>
+            <p>
+              HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap, Responsive
+              Design
+            </p>
+          </div>
+          <div
+            class="bg-secondary p-6 rounded-lg border border-secondary hover:border-accent transition-colors duration-300"
+          >
+            <div class="text-4xl mb-4">🧠</div>
+            <h3 class="text-2xl font-bold mb-2 text-heading-accent">ML & AI</h3>
+            <p>
+              Python, NumPy, Pandas, Scikit-learn, TensorFlow, Data
+              Preprocessing, Model Training
+            </p>
+          </div>
+          <div
+            class="bg-secondary p-6 rounded-lg border border-secondary hover:border-accent transition-colors duration-300"
+          >
+            <div class="text-4xl mb-4">⚙️</div>
+            <h3 class="text-2xl font-bold mb-2 text-heading-accent">
+              Back-End
+            </h3>
+            <p>Python, Flask, SQLite, Database Integration</p>
+          </div>
+          <div
+            class="bg-secondary p-6 rounded-lg border border-secondary hover:border-accent transition-colors duration-300"
+          >
+            <div class="text-4xl mb-4">🌿</div>
+            <h3 class="text-2xl font-bold mb-2 text-heading-accent">
+              Tools & Version Control
+            </h3>
+            <p>Git, GitHub, VS Code, Jupyter Notebooks</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-20 scroll-target fade-in-section">
+        <h2 class="text-4xl font-bold text-center mb-12 text-heading-accent">
+          My Projects
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-secondary rounded-lg overflow-hidden group transform transition-transform duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://placehold.co/600x400/1A1A1A/FF8C00?text=IoT+Muscle+Monitor"
+              alt="Project 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-heading-accent">
+                IoT based muscle monitoring system
+              </h3>
+              <p class="mt-2 mb-4">
+                An IoT system for real-time muscle activity monitoring,
+                displaying data through a user-friendly web interface.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >Flask</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >Python</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >HTML/CSS</span
+                >
+              </div>
+              <div class="flex gap-4 mt-4">
+                <a
+                  href="https://github.com/ubaidalishah/Final_Year_Project"
+                  class="border-2 border-accent text-accent font-bold py-2 px-4 rounded-full text-sm hover:bg-accent hover:text-primary transition duration-300"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-secondary rounded-lg overflow-hidden group transform transition-transform duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://placehold.co/600x400/1A1A1A/FF8C00?text=Language+Transcriber"
+              alt="Project 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-heading-accent">
+                Language transcription and translation web app
+              </h3>
+              <p class="mt-2 mb-4">
+                A web application that transcribes spoken language to text and
+                provides real-time translation using machine learning APIs.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >Flask</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >Python</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >HTML/CSS</span
+                >
+              </div>
+              <div class="flex gap-4 mt-4">
+                <a
+                  href="https://github.com/ubaidalishah/Health_Care"
+                  class="border-2 border-accent text-accent font-bold py-2 px-4 rounded-full text-sm hover:bg-accent hover:text-primary transition duration-300"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-secondary rounded-lg overflow-hidden group transform transition-transform duration-300 hover:-translate-y-2"
+          >
+            <img
+              src="https://placehold.co/600x400/1A1A1A/FF8C00?text=Pothole+Detection"
+              alt="Project 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-heading-accent">
+                Pothole detection system
+              </h3>
+              <p class="mt-2 mb-4">
+                An image processing and web-based system for detecting potholes,
+                aiding in road maintenance and infrastructure management.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >Flask</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >Python</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >JavaScript</span
+                >
+                <span
+                  class="bg-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded border border-accent text-accent"
+                  >HTML/CSS</span
+                >
+              </div>
+              <div class="flex gap-4 mt-4">
+                <a
+                  href="https://github.com/ubaidalishah/Pothole_Detection_Flask_App"
+                  class="border-2 border-accent text-accent font-bold py-2 px-4 rounded-full text-sm hover:bg-accent hover:text-primary transition duration-300"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="py-20 scroll-target fade-in-section">
+        <h2 class="text-4xl font-bold text-center mb-12 text-heading-accent">
+          Education
+        </h2>
+        <div
+          class="max-w-3xl mx-auto bg-secondary p-8 rounded-lg border border-secondary"
+        >
+          <div
+            class="flex flex-col sm:flex-row justify-between items-start sm:items-center"
+          >
+            <div>
+              <h3 class="text-2xl font-bold text-body">
+                Bachelor of Science in Computer Science
+              </h3>
+              <p class="text-lg text-heading-accent">
+                Institute of Management Sciences (IMSciences)
+              </p>
+            </div>
+            <p class="text-lg bg-primary px-4 py-1 rounded-full mt-2 sm:mt-0">
+              2020 - 2024
+            </p>
+          </div>
+          <p class="mt-4 text-lg">Peshawar, Pakistan</p>
+          <p class="mt-2">
+            Key Coursework: Data Structures, Algorithms, Artificial
+            Intelligence, Web Development, Database Systems, Software
+            Engineering.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 scroll-target fade-in-section">
+        <h2 class="text-4xl font-bold text-center mb-4 text-heading-accent">
+          Get In Touch
+        </h2>
+        <p class="text-center max-w-2xl mx-auto mb-12">
+          I'm currently available for freelance work and open to discussing new
+          projects and opportunities. Feel free to reach out!
+        </p>
+        <form class="max-w-xl mx-auto" onsubmit="return false;">
+          <div class="mb-4">
+            <label for="name" class="block mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full p-3 rounded-lg bg-secondary border-2 border-secondary focus:border-accent focus:outline-none transition-colors duration-300"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full p-3 rounded-lg bg-secondary border-2 border-secondary focus:border-accent focus:outline-none transition-colors duration-300"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="w-full p-3 rounded-lg bg-secondary border-2 border-secondary focus:border-accent focus:outline-none transition-colors duration-300"
+            ></textarea>
+          </div>
+          <div class="text-center flex justify-center gap-4">
+            <button
+              type="button"
+              id="send-email-btn"
+              class="bg-accent text-primary font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300 transform hover:scale-105"
+            >
+              Send Email
+            </button>
+            <button
+              type="button"
+              id="send-whatsapp-btn"
+              class="border-2 border-accent text-accent font-bold py-3 px-8 rounded-full hover:bg-accent hover:text-primary transition duration-300 transform hover:scale-105"
+            >
+              Send WhatsApp
+            </button>
+          </div>
+          <p class="text-center text-sm mt-4 text-body/70">
+            Clicking these buttons will open your email client or WhatsApp
+            application.
+          </p>
+        </form>
+        <div class="text-center mt-12">
+          <p class="text-lg">Or contact me directly at:</p>
+          <a
+            href="mailto:ubaidalishah18@gmail.com"
+            class="text-xl text-heading-accent hover:underline"
+            >ubaidalishah18@gmail.com</a
+          >
+          <p class="mt-2">Swat, Pakistan</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black py-8">
+      <div class="container mx-auto px-6 text-center text-body">
+        <div class="flex justify-center gap-6 mb-4">
+          <a
+            href="https://github.com/ubaidalishah"
+            class="hover:text-accent transition-colors duration-300"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ubaid-ali-shah-0a81a7204/"
+            class="hover:text-accent transition-colors duration-300"
+            >LinkedIn</a
+          >
+        </div>
+        <p id="copyright-text">
+          &copy; 2024 Ubaid Ali Shah. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <div
+      id="chat-icon"
+      class="fixed bottom-6 right-6 bg-accent text-primary rounded-full p-4 shadow-lg cursor-pointer hover:scale-110 transition-transform duration-300 z-40"
+    >
+      <span class="text-2xl">✨</span>
+    </div>
+
+    <div id="chat-modal-overlay" class="chat-modal-overlay">
+      <div class="chat-modal-content">
+        <div
+          class="flex justify-between items-center bg-secondary p-4 rounded-t-lg"
+        >
+          <h3 class="text-xl font-bold text-heading-accent">
+            Ask Ubaid Anything ✨
+          </h3>
+          <span id="chat-close-btn" class="chat-close-btn">&times;</span>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+          <div class="chat-message-ai">
+            Hello! I'm Ubaid's portfolio assistant. Ask me anything about his
+            skills, projects, or background.
+          </div>
+        </div>
+        <div class="chat-input-area">
+          <input
+            type="text"
+            id="chat-input"
+            class="chat-input"
+            placeholder="Ask a question..."
+            autocomplete="off"
+          />
+          <button id="chat-send-btn" class="chat-send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+
+        // Skills Chart
+        const ctx = document.getElementById("skillsChart").getContext("2d");
+        const skillsChart = new Chart(ctx, {
+          type: "radar",
+          data: {
+            labels: [
+              "Front-End Dev",
+              "Machine Learning",
+              "Back-End Dev",
+              "UI/UX Design",
+              "Problem Solving",
+              "Version Control",
+            ],
+            datasets: [
+              {
+                label: "Proficiency",
+                data: [90, 80, 75, 70, 85, 95],
+                backgroundColor: "rgba(255, 140, 0, 0.2)",
+                borderColor: "#FF8C00",
+                pointBackgroundColor: "#FF8C00",
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "#FF8C00",
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            scales: {
+              r: {
+                angleLines: { color: "rgba(255, 255, 255, 0.2)" },
+                grid: { color: "rgba(255, 255, 255, 0.2)" },
+                pointLabels: {
+                  color: "#D3D3D3",
+                  font: {
+                    size: 14,
+                  },
+                },
+                ticks: {
+                  color: "#D3D3D3",
+                  backdropColor: "#1A1A1A",
+                  stepSize: 20,
+                },
+                min: 0,
+                max: 100,
+              },
+            },
+            plugins: {
+              legend: {
+                display: false,
+              },
+            },
+          },
+        });
+
+        // Fade in sections on scroll
+        const sections = document.querySelectorAll(".fade-in-section");
+        const options = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+        const observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+
+        // Set first section to visible by default
+        if (sections.length > 0) {
+          sections[0].classList.add("is-visible");
+        }
+
+        // Sticky header shadow on scroll
+        const header = document.getElementById("header");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 10) {
+            header.classList.add("shadow-lg", "shadow-orange-900/10");
+          } else {
+            header.classList.remove("shadow-lg", "shadow-orange-900/10");
+          }
+        });
+
+        // Contact Form Logic
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+        const sendEmailBtn = document.getElementById("send-email-btn");
+        const sendWhatsappBtn = document.getElementById("send-whatsapp-btn");
+
+        if (sendEmailBtn) {
+          sendEmailBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
+
+            const subject = encodeURIComponent(
+              `Portfolio Contact from ${name}`
+            );
+            const body = encodeURIComponent(
+              `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            );
+            window.open(
+              `mailto:ubaidalishah18@gmail.com?subject=${subject}&body=${body}`,
+              "_blank"
+            );
+          });
+        }
+
+        if (sendWhatsappBtn) {
+          sendWhatsappBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const name = nameInput.value.trim();
+            const message = messageInput.value.trim();
+            // IMPORTANT: Replace '923XXXXXXXXX' with your actual WhatsApp number including country code, no '+' or spaces.
+            const whatsappNumber = "923477959704";
+
+            const whatsappMessage = encodeURIComponent(
+              `Hello Ubaid Ali Shah,\n\nMy name is ${name}.\n\nMessage:\n${message}\n\n(Sent via your portfolio website)`
+            );
+            window.open(
+              `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`,
+              "_blank"
+            );
+          });
+        }
+
+        // Chatbot Logic
+        const chatIcon = document.getElementById("chat-icon");
+        const chatModalOverlay = document.getElementById("chat-modal-overlay");
+        const chatCloseBtn = document.getElementById("chat-close-btn");
+        const chatMessagesDiv = document.getElementById("chat-messages");
+        const chatInput = document.getElementById("chat-input");
+        const chatSendBtn = document.getElementById("chat-send-btn");
+
+        chatIcon.addEventListener("click", () => {
+          chatModalOverlay.classList.add("open");
+          chatInput.focus();
+        });
+
+        chatCloseBtn.addEventListener("click", () => {
+          chatModalOverlay.classList.remove("open");
+        });
+
+        window.addEventListener("keydown", (e) => {
+          if (
+            e.key === "Escape" &&
+            chatModalOverlay.classList.contains("open")
+          ) {
+            chatModalOverlay.classList.remove("open");
+          }
+        });
+
+        function addMessage(sender, text) {
+          const messageDiv = document.createElement("div");
+          messageDiv.classList.add(
+            sender === "user" ? "chat-message-user" : "chat-message-ai"
+          );
+          messageDiv.textContent = text;
+          chatMessagesDiv.appendChild(messageDiv);
+          chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Scroll to bottom
+        }
+
+        function showTypingIndicator() {
+          const typingDiv = document.createElement("div");
+          typingDiv.id = "typing-indicator";
+          typingDiv.classList.add("chat-message-ai", "loading-dots");
+          typingDiv.innerHTML = "<span>.</span><span>.</span><span>.</span>";
+          chatMessagesDiv.appendChild(typingDiv);
+          chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+          const typingDiv = document.getElementById("typing-indicator");
+          if (typingDiv) {
+            typingDiv.remove();
+          }
+        }
+
+        async function getGeminiResponse(prompt) {
+          showTypingIndicator();
+          try {
+            // Extract full content of the portfolio for context
+            const heroText = document.querySelector("#hero p").textContent;
+            const aboutText = document.querySelector(
+              "#about .md\\:col-span-3"
+            ).textContent;
+            const skillsText = Array.from(
+              document.querySelectorAll("#skills .bg-secondary p")
+            )
+              .map((p) => p.textContent)
+              .join(". ");
+            const projectsText = Array.from(
+              document.querySelectorAll("#projects .bg-secondary .p-6")
+            )
+              .map(
+                (div) =>
+                  `${div.querySelector("h3").textContent}: ${
+                    div.querySelector("p").textContent
+                  } Technologies: ${Array.from(div.querySelectorAll("span"))
+                    .map((s) => s.textContent)
+                    .join(", ")}`
+              )
+              .join("\n\n");
+            const educationText = document.querySelector(
+              "#education .max-w-3xl"
+            ).textContent;
+
+            const portfolioContext = `
+                    Here is Ubaid Ali Shah's portfolio information:
+
+                    About Section:
+                    ${aboutText}
+
+                    Skills Section:
+                    ${skillsText}
+
+                    Projects Section:
+                    ${projectsText}
+
+                    Education Section:
+                    ${educationText}
+
+                    Hero Section Summary:
+                    ${heroText}
+                    `;
+
+            let chatHistory = [];
+            chatHistory.push({
+              role: "user",
+              parts: [
+                {
+                  text: `Based *only* on the following portfolio information, answer the user's question. If the answer is not in the provided text, state politely that you don't have information on that topic from the portfolio. Keep answers concise and professional.
+
+                    Portfolio Content:\n\n${portfolioContext}\n\nUser's question: ${prompt}`,
+                },
+              ],
+            });
+
+            const payload = { contents: chatHistory };
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            const response = await fetch(apiUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            });
+
+            const result = await response.json();
+            if (
+              result.candidates &&
+              result.candidates.length > 0 &&
+              result.candidates[0].content &&
+              result.candidates[0].content.parts &&
+              result.candidates[0].content.parts.length > 0
+            ) {
+              return result.candidates[0].content.parts[0].text;
+            } else {
+              return "I apologize, but I couldn't process that request or find an answer in Ubaid's portfolio. Please try rephrasing your question.";
+            }
+          } catch (error) {
+            console.error("Error calling Gemini API:", error);
+            return "I'm sorry, I'm having trouble connecting to the AI at the moment. Please try again later.";
+          } finally {
+            removeTypingIndicator();
+          }
+        }
+
+        chatSendBtn.addEventListener("click", async () => {
+          const userMessage = chatInput.value.trim();
+          if (userMessage) {
+            addMessage("user", userMessage);
+            chatInput.value = "";
+            const aiResponse = await getGeminiResponse(userMessage);
+            addMessage("ai", aiResponse);
+          }
+        });
+
+        chatInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            chatSendBtn.click();
+          }
+        });
+
+        // Dynamic Copyright Year
+        const copyrightTextElement = document.getElementById("copyright-text");
+        if (copyrightTextElement) {
+          const currentYear = new Date().getFullYear();
+          copyrightTextElement.textContent = `© ${currentYear} Ubaid Ali Shah. All rights reserved.`;
+        }
+      });
+    </script>
+  </body>
+</html>

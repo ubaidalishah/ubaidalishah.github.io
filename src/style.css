@@ -1,0 +1,224 @@
+body {
+  background-color: #1a1a1a;
+  color: #d3d3d3;
+  font-family: "Inter", sans-serif;
+}
+.text-heading-accent {
+  color: #ff8c00;
+}
+.text-body {
+  color: #d3d3d3;
+}
+.bg-accent {
+  background-color: #ff8c00;
+}
+.border-accent {
+  border-color: #ff8c00;
+}
+.bg-primary {
+  background-color: #1a1a1a;
+}
+.bg-secondary {
+  background-color: #333333;
+}
+.border-secondary {
+  border-color: #333333;
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff8c00;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.nav-link:hover {
+  color: #ff8c00;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.scroll-target {
+  scroll-margin-top: 80px;
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  max-height: 400px;
+}
+@media (min-width: 768px) {
+  .chart-container {
+    height: 400px;
+  }
+}
+.chat-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.chat-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.chat-modal-content {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  height: 80vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #333333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+.chat-modal-overlay.open .chat-modal-content {
+  transform: scale(1);
+}
+.chat-messages {
+  flex-grow: 1;
+  padding: 16px;
+  overflow-y: auto;
+  border-bottom: 1px solid #333333;
+  display: flex;
+  flex-direction: column;
+}
+.chat-message-user {
+  background-color: #ff8c00;
+  color: #1a1a1a;
+  align-self: flex-end;
+  border-radius: 12px 12px 0 12px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.chat-message-ai {
+  background-color: #333333;
+  color: #d3d3d3;
+  align-self: flex-start;
+  border-radius: 12px 12px 12px 0;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.chat-input-area {
+  display: flex;
+  padding: 16px;
+  gap: 8px;
+  align-items: center;
+}
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #333333;
+  border: 1px solid #555555;
+  color: #d3d3d3;
+  outline: none;
+}
+.chat-input:focus {
+  border-color: #ff8c00;
+}
+.chat-send-btn {
+  background-color: #ff8c00;
+  color: #1a1a1a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.chat-send-btn:hover {
+  background-color: #e67a00;
+}
+.chat-close-btn {
+  color: #d3d3d3;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.3s ease;
+}
+.chat-close-btn:hover {
+  color: #ff8c00;
+}
+.loading-dots span {
+  animation: blink 1.4s infinite linear;
+  animation-fill-mode: both;
+}
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+.profile-image-container {
+  border-radius: 0.5rem; /* Matches rounded-lg */
+  overflow: hidden; /* Ensures shadow doesn't escape rounded corners */
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.4); /* Subtle orange glow */
+  transition: box-shadow 0.3s ease;
+}
+.profile-image-container:hover {
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.7); /* Stronger glow on hover */
+}
+body {
+  background-image: url("/src/background_portfolio.png");
+  background-size: cover; /* Ensures it covers full screen */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;
+  height: 80vh;
+  /* overflow-x: hidden; */
+}
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+    background-color: #1a1a1a;
+  }
+}
