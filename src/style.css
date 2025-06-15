@@ -208,12 +208,12 @@ body {
 .profile-image-container:hover {
   box-shadow: 0 0 25px rgba(255, 140, 0, 0.7); /* Stronger glow on hover */
 }
-body {
+.whole-website {
   background-image: url("/src/background_portfolio.png");
   background-size: cover; /* Ensures it covers full screen */
   background-repeat: no-repeat; /* Prevents tiling */
   background-position: center;
-  height: 80vh;
+  height: 100vh;
   /* overflow-x: hidden; */
 }
 @media (max-width: 767px) {
