@@ -217,7 +217,7 @@ body {
   /* overflow-x: hidden; */
 }
 @media (max-width: 767px) {
-  body {
+  .whole-website {
     background-image: none;
     background-color: #1a1a1a;
   }
